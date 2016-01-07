@@ -1,16 +1,16 @@
 {
   "name": "grunt-phonegap-build",
   "description": "Build phonegap app via build.phonegap.com",
-  "version": "0.0.8",
-  "homepage": "https://github.com/centralway/grunt-phonegap-build",
+  "version": "0.0.9",
+  "homepage": "https://github.com/kanhaic/grunt-phonegap-build",
   "author": {
-    "name": "Martin Naumann",
-    "email": "martin.naumann@centralway.com"
+    "name": "Kanhai Chhugani",
+    "email": "kanhai@chhugani.org"
   },
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "git://github.com/centralway/grunt-phonegap-build.git"
+    "url": "git://github.com/kanhaic/grunt-phonegap-build.git"
   },
   "main": "grunt.js",
   "engines": {
