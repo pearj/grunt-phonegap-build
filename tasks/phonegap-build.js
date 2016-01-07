@@ -69,8 +69,23 @@ function uploadZip(taskRefs, callback) {
   if (taskRefs.options.isRepository) {
     data = { data: { pull: true } };
   } else {
-    data = { file: { file: taskRefs.options.archive, content_type: "application/zip" }};
+    data = { file: { file: taskRefs.options.archive, content_type: "application/zip" },
+              data: {}
+            };
     config.multipart = true;
+  }
+
+  if (taskRefs.options.keys) {
+    data.data.keys = {};
+    if (taskRefs.options.keys.ios && taskRefs.options.keys.ios.id) {
+        data.data.keys.ios = taskRefs.options.keys.ios;
+    }
+    if (taskRefs.options.keys.android && taskRefs.options.keys.android.id) {
+        data.data.keys.android = taskRefs.options.keys.android;
+    }
+    if (taskRefs.options.keys.winphone && taskRefs.options.keys.winphone.id) {
+        data.data.keys.winphone = taskRefs.options.keys.winphone;
+    }
   }
 
   taskRefs.log.ok("Starting upload");
